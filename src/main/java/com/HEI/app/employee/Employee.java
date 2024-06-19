@@ -24,7 +24,6 @@ public abstract sealed class  Employee permits Guard{
         var oneDay=24;
         var oneWeek=7;
         double salaryPerDay=category.getSalaryPerWeek().getNetSalary()/(oneDay*oneWeek);
-
         return completedHours()*salaryPerDay;
     }
 
