@@ -6,12 +6,12 @@ import lombok.Data;
 @Data
 public class Category {
     private String name;
-    private float workHour;
-    private Salary salaryPerWeek;
+    private float normalWorkHour;
+    private Salary normalSalaryPerWeek;
     public Category(String name,float workHour,Salary salaryPerWeek){
         this.name=name;
-        this.workHour=workHour;
-        this.salaryPerWeek=salaryPerWeek;
+        this.normalWorkHour=workHour;
+        this.normalSalaryPerWeek=salaryPerWeek;
     }
 
 }
