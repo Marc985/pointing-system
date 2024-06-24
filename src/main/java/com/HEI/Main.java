@@ -19,9 +19,12 @@ public class Main {
         juneCalendar.addHoliday(27);
 
         Guard guard=new Guard("1","john","doe", Date.from(Instant.now()),
-                Date.from(Instant.now()),Date.from(Instant.now()),2000,new Category("guard",8,new Salary(110000)));
-        guard.workedDay(juneCalendar);
-        guard.setAbsence(9);
+                Date.from(Instant.now()),Date.from(Instant.now()),2000,new Category("guard",56,new Salary(110000)));
+        guard.addWorkedDay(juneCalendar);
+       // guard.setAbsence(10);
+        guard.setWorkHour(12,18);
+        System.out.println(guard.calculateSalaries());
         System.out.println(guard.completedHour());
+        System.out.println(guard.overtimeHour(juneCalendar));
     }
 }

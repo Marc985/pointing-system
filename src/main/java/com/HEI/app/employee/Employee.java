@@ -1,12 +1,15 @@
 package com.HEI.app.employee;
 
 import com.HEI.app.Category;
+import com.HEI.app.calendar.Day;
 import com.HEI.app.calendar.WorkCalendar;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 
 import java.util.Date;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 public abstract sealed class  Employee permits Guard{
@@ -19,11 +22,9 @@ public abstract sealed class  Employee permits Guard{
     private double salary;
     private Category category;
 
-    public void amountToBePayed(){
-        var oneDay=24;
-        var oneWeek=7;
-        double salaryPerDay=category.getNormalSalaryPerWeek().getNetSalary()/(oneDay*oneWeek);
-        //return completedHours()*salaryPerDay;
-    }
+
+
+    public abstract int normalWorkDays();
+    public abstract List<Day> workDay(WorkCalendar workCalendar);
 
 }
