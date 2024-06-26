@@ -14,6 +14,8 @@ public class Day {
     private String name;
     private Date date;
     private DayType type;
+    private int dayHour;
+    private int nightHour;
     private int completedHours;
     public Day(int day,Date date,DayType type){
             this.name=dayOfWeek(day);

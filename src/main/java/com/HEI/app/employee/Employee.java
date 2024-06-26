@@ -24,6 +24,7 @@ public abstract sealed class  Employee permits Guard{
 
 
 
+
     public abstract int normalWorkDays();
     public abstract List<Day> workDay(WorkCalendar workCalendar);
 
