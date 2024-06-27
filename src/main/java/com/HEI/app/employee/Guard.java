@@ -6,6 +6,7 @@ import com.HEI.app.Enum.ShiftType;
 import com.HEI.app.Salary;
 import com.HEI.app.calendar.Day;
 import com.HEI.app.calendar.WorkCalendar;
+
 import lombok.Data;
 import lombok.Setter;
 
@@ -21,12 +22,14 @@ public final class Guard extends Employee {
    private int nightHour;
    private int dayHour;
 
+
     public Guard(String employeeId, String firstName, String lastName, Date birthdate, Date hiringDate, Date contratEndDate, double salary, Category category) {
         super(employeeId, firstName, lastName, birthdate, hiringDate, contratEndDate, salary, category);
         presenceDays=new ArrayList<>();
         shiftType=ShiftType.DAY;
         dayHour=0;
         nightHour=0;
+
 
     }
     public ShiftType getShiftType(){
@@ -49,18 +52,27 @@ public final class Guard extends Employee {
             }
 
         }
-
     }
-    /*public Salary calculateSalaries(){
-        List<Day> presence=presenceDays;
-        double normalRate=amountOfSalaryPerHour().getGrossSalary();
-        double increasedHourRate=amountOfSalaryPerHour().getGrossSalary()*calculateIncreasedHourPercentage();
-        double amount=(dayHour*dayRate)+(nightRate*nightHour);
+    public Salary calculateSalaries(){
+        double normalRate = amountOfSalaryPerHour().getGrossSalary();
+        double totalSalary = 0.0;
 
+        for (Day day : presenceDays) {
+            double dailySalary = normalRate * normalWorkDays();
+            if (shiftType.equals(ShiftType.NIGHT)) {
+                dailySalary += dailySalary * 0.3;
+            }
+           /* if (day.isWeekend()) {
+                dailySalary += dailySalary * 0.4;
+            }*/
+            if (day.isHoliday()) {
+                dailySalary += dailySalary * 0.5;
+            }
+            totalSalary += dailySalary;
+        }
 
-
-        return new Salary(amount);
-    }*/
+        return new Salary(Math.round(totalSalary));
+    }
 
 
     public List<Day> getPresenceDays(){
@@ -115,16 +127,21 @@ public final class Guard extends Employee {
         return 0;
 
 }
-public float calculateIncreasedHourPercentage(){
-        float percentage=0;
-        for(Day day:presenceDays){
-            if(day.isHoliday())
-                percentage+= 0.5F;
-            if(shiftType.equals(ShiftType.NIGHT)){
-                percentage+= 0.3F;
-            }
+private double calculateIncreasedHourPercentage(double normalSalaryPerHour){
 
+    for(Day day:presenceDays){
+        if(shiftType.equals(ShiftType.NIGHT)){
+            normalSalaryPerHour*= 0.3F;
         }
+        if(day.isWeekend()){
+            normalSalaryPerHour*=0.4F;
+        }
+        if(day.isHoliday())
+            normalSalaryPerHour*= 0.5F;
+
+
+    }
+    return normalSalaryPerHour;
 }
 
 

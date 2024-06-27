@@ -9,7 +9,7 @@ public class Salary {
     public Salary(double grossSalary){
         float netSalaryPercentage= 0.8F;
         this.grossSalary=grossSalary;
-        this.netSalary=grossSalary*netSalaryPercentage;
+        this.netSalary=Math.round(grossSalary*netSalaryPercentage);
     }
 
     public static void main(String[] args) {

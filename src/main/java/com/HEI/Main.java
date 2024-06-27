@@ -16,8 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
         WorkCalendar juneCalendar=new WorkCalendar(6,2024,6);
-        juneCalendar.addHoliday(25);
-        juneCalendar.addHoliday(27);
+        //juneCalendar.addHoliday(25);
+       // juneCalendar.addHoliday(27);
 
 // create a new guard named john
         Guard rakoto=new Guard("1","john","doe", Date.from(Instant.now()),
