@@ -7,9 +7,9 @@
     <list default="true" id="17f96dd8-bb93-4b2b-aa8b-2e8c8c890ce4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/HEI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HEI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HEI/app/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HEI/app/Salary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HEI/app/calendar/WorkCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HEI/app/calendar/WorkCalendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/HEI/app/employee/Guard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HEI/app/employee/Guard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MarcheurIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GuardIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GuardIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GuardIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +46,16 @@
     "JUnit.GuardIT.checkRabeSalaryWithHoliday.executor": "Run",
     "JUnit.GuardIT.checkRakotoSalaryWithHoliday.executor": "Run",
     "JUnit.GuardIT.executor": "Run",
+    "JUnit.GuardIT.rabe.executor": "Run",
+    "JUnit.GuardIT.rakoto.executor": "Run",
+    "JUnit.GuardIT.test.executor": "Run",
     "JUnit.MarcheurIT.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marc/HEI/Devoir/projet1/pointing-system",
+    "last_opened_file_path": "/home/marc/HEI/Devoir/projet1/patrimoine",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,7 +67,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.GuardIT">
+  <component name="RunManager" selected="JUnit.GuardIT.rakoto">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.HEI.Main" />
       <module name="marcheur-blanc1" />
@@ -87,31 +90,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuardIT.checkRabeAndRakotoSalary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GuardIT.rabe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marcheur-blanc1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GuardIT" />
-      <option name="METHOD_NAME" value="checkRabeAndRakotoSalary" />
+      <option name="METHOD_NAME" value="rabe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuardIT.checkRabeSalaryWithHoliday" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GuardIT.rakoto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marcheur-blanc1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GuardIT" />
-      <option name="METHOD_NAME" value="checkRabeSalaryWithHoliday" />
+      <option name="METHOD_NAME" value="rakoto" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuardIT.checkRakotoSalaryWithHoliday" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GuardIT.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marcheur-blanc1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GuardIT" />
-      <option name="METHOD_NAME" value="checkRakotoSalaryWithHoliday" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GuardIT" />
-        <item itemvalue="JUnit.GuardIT.checkRabeSalaryWithHoliday" />
-        <item itemvalue="JUnit.GuardIT.checkRakotoSalaryWithHoliday" />
-        <item itemvalue="JUnit.GuardIT.checkRabeAndRakotoSalary" />
+        <item itemvalue="JUnit.GuardIT.rakoto" />
+        <item itemvalue="JUnit.GuardIT.rabe" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GuardIT.test" />
+        <item itemvalue="JUnit.GuardIT" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +175,9 @@
       <workItem from="1719424832141" duration="1961000" />
       <workItem from="1719430823948" duration="1631000" />
       <workItem from="1719436260620" duration="26000" />
-      <workItem from="1719475393789" duration="6789000" />
+      <workItem from="1719475393789" duration="13113000" />
+      <workItem from="1719510201634" duration="2819000" />
+      <workItem from="1719650842510" duration="24000" />
     </task>
     <servers />
   </component>
@@ -191,6 +196,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/HEI/app/employee/Guard.java</url>
           <line>17</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GuardIT.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/HEI/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/HEI/app/employee/Guard.java</url>

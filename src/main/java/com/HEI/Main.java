@@ -8,6 +8,7 @@ import com.HEI.app.calendar.WorkCalendar;
 import com.HEI.app.employee.Guard;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +16,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        WorkCalendar juneCalendar=new WorkCalendar(6,2024,6);
+
+        WorkCalendar juneCalendar=new WorkCalendar(LocalDate.of(2024,5,26),LocalDate.of(2024,7,6));
         //juneCalendar.addHoliday(25);
        // juneCalendar.addHoliday(27);
 
@@ -41,6 +43,7 @@ public class Main {
         System.out.println(rabe.calculateSalaries());
         System.out.println(rabe.completedHour());
     }
+
 
 
 

@@ -43,7 +43,6 @@ public final class Guard extends Employee {
         for(Day day:workCalendar.getDays()){
 
             presenceDays.add(day);
-           // day.setCompletedHours(normalWorkDays());
             if(shiftType.equals(ShiftType.DAY)){
                 dayHour+=normalWorkDays();
             }
@@ -62,9 +61,10 @@ public final class Guard extends Employee {
             if (shiftType.equals(ShiftType.NIGHT)) {
                 dailySalary += dailySalary * 0.3;
             }
-           /* if (day.isWeekend()) {
+            if (day.isWeekend()) {
                 dailySalary += dailySalary * 0.4;
-            }*/
+            }
+
             if (day.isHoliday()) {
                 dailySalary += dailySalary * 0.5;
             }
